@@ -50,7 +50,7 @@ public class PizzeriaAdminConsoleApp {
 			switch (choix) {
 			case "1":
 				for (Pizza liste : listePizza) {
-					System.out.println(liste.getCode() + " -> " + liste.getLibelle() + " (" + liste.getPrix() + "€)");
+					System.out.println(liste.toString());
 				}
 
 				System.out.println("\n" + menu);
@@ -71,7 +71,7 @@ public class PizzeriaAdminConsoleApp {
 				break;
 			case "3":
 				for (Pizza liste : listePizza) {
-					System.out.println(liste.getCode() + " -> " + liste.getLibelle() + " (" + liste.getPrix() + "€)");
+					System.out.println(liste.toString());
 				}
 
 				System.out.println("\nVeuillez choisir le code de la pizza à modifier");
@@ -97,7 +97,7 @@ public class PizzeriaAdminConsoleApp {
 				break;
 			case "4":
 				for (Pizza liste : listePizza) {
-					System.out.println(liste.getCode() + " -> " + liste.getLibelle() + " (" + liste.getPrix() + "€)");
+					System.out.println(liste.toString());
 				}
 
 				System.out.println("Veuillez choisir le code de la pizza à supprimer : \n");

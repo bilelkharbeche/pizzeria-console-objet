@@ -138,6 +138,7 @@ public class Pizza {
 	 * 
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -162,6 +163,16 @@ public class Pizza {
 		if (Double.doubleToLongBits(prix) != Double.doubleToLongBits(other.prix))
 			return false;
 		return true;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return code + " -> " + libelle + " (" + prix + "€)";
 	}
 
 }
