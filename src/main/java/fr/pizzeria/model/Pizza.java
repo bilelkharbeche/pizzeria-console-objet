@@ -9,6 +9,12 @@ package fr.pizzeria.model;
  */
 public class Pizza {
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#toString()
+	 */
+
 	/** id : int */
 	private int id;
 	/** code : String */
@@ -22,9 +28,13 @@ public class Pizza {
 	 * Constructor
 	 * 
 	 * @param id
+	 *            id
 	 * @param code
+	 *            code pizza
 	 * @param libelle
+	 *            libellé
 	 * @param prix
+	 *            prix
 	 */
 	public Pizza(int id, String code, String libelle, double prix) {
 		this.id = id;
@@ -121,6 +131,37 @@ public class Pizza {
 	 */
 	public void setPrix(double prix) {
 		this.prix = prix;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Pizza other = (Pizza) obj;
+		if (code == null) {
+			if (other.code != null)
+				return false;
+		} else if (!code.equals(other.code))
+			return false;
+		if (id != other.id)
+			return false;
+		if (libelle == null) {
+			if (other.libelle != null)
+				return false;
+		} else if (!libelle.equals(other.libelle))
+			return false;
+		if (Double.doubleToLongBits(prix) != Double.doubleToLongBits(other.prix))
+			return false;
+		return true;
 	}
 
 }
