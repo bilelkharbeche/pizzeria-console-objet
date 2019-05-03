@@ -5,18 +5,13 @@ package fr.pizzeria.model;
 
 import java.util.Scanner;
 
+import fr.pizzeria.exception.StockageException;
+
 /**
  * @author KHARBECHE Bilel
  *
  */
 public abstract class MenuService {
 
-	void executeUC(Scanner scanner) {
-	}
-
-	void executeUC(Scanner scanner, PizzaMemDao dao) {
-		// TODO Auto-generated method stub
-
-	}
-
+	public abstract void executeUC(Scanner scanner, IPizzaDao dao) throws StockageException;
 }

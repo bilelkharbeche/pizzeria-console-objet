@@ -17,7 +17,7 @@ public class ListerPizzasService extends MenuService {
 	 * @see fr.pizzeria.model.MenuService#executeUC(java.util.Scanner)
 	 */
 	@Override
-	public void executeUC(Scanner scanner, PizzaMemDao dao) {
+	public void executeUC(Scanner scanner, IPizzaDao dao) {
 		// TODO Auto-generated method stub
 		for (Pizza listePizza : dao.findAllPizzas()) {
 			System.out.println(listePizza);

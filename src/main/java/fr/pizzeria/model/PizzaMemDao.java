@@ -78,7 +78,7 @@ public class PizzaMemDao implements IPizzaDao {
 	@Override
 	public boolean pizzaExists(String codePizza) {
 		// TODO Auto-generated method stub
-		return false;
+		return findPizzaByCode(codePizza) != null;
 	}
 
 	/**
