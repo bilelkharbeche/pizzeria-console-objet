@@ -8,6 +8,8 @@ import java.util.Scanner;
 import fr.pizzeria.exception.DeletePizzaException;
 
 /**
+ * Execute le choix 4 : Supprimer une pizza
+ * 
  * @author KHARBECHE Bilel
  *
  */

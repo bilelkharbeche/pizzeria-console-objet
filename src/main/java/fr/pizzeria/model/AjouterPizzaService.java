@@ -10,6 +10,8 @@ import org.apache.commons.lang3.math.NumberUtils;
 import fr.pizzeria.exception.SavePizzaException;
 
 /**
+ * Exécute le cas d'utilsiation 2 : ajouter une nouvelle pizza
+ * 
  * @author KHARBECHE Bilel
  *
  */

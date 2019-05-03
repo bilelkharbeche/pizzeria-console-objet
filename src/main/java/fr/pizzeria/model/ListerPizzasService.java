@@ -6,6 +6,8 @@ package fr.pizzeria.model;
 import java.util.Scanner;
 
 /**
+ * Execute le choix 1 : Affiche la liste des pizzas
+ * 
  * @author KHARBECHE Bilel
  *
  */
