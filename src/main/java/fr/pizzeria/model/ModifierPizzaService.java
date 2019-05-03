@@ -20,6 +20,12 @@ public class ModifierPizzaService extends MenuService {
 	 * 
 	 * @see fr.pizzeria.model.MenuService#executeUC(java.util.Scanner)
 	 */
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see fr.pizzeria.model.MenuService#executeUC(java.util.Scanner,
+	 * fr.pizzeria.model.IPizzaDao)
+	 */
 	@Override
 	public void executeUC(Scanner scanner, IPizzaDao dao) throws UpdatePizzaException {
 		// TODO Auto-generated method stub
@@ -57,8 +63,16 @@ public class ModifierPizzaService extends MenuService {
 		if (!NumberUtils.isCreatable(modifPrix)) {
 			throw new UpdatePizzaException("Valeur interdite");
 		} else {
-			double modifDoublePrix = Double.parseDouble(modifPrix);
-			dao.updatePizza(codeAModifier, new Pizza(modifCode, modifNom, modifDoublePrix));
+			System.out.println("Veuillez saisir une nouvelle catégorie");
+		}
+		double modifDoublePrix = Double.parseDouble(modifPrix);
+		String modifCat = scanner.nextLine();
+
+		if (!CategoriePizza.CategExists(modifCat)) {
+			throw new UpdatePizzaException("La catégorie saisie est invalide");
+		} else {
+			CategoriePizza cat = CategoriePizza.valueOf(modifCat);
+			dao.updatePizza(codeAModifier, new Pizza(modifCode, modifNom, modifDoublePrix, modifCat));
 		}
 	}
 

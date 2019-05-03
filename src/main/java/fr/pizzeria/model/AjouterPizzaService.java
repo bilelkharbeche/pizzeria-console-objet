@@ -45,8 +45,17 @@ public class AjouterPizzaService extends MenuService {
 		if (!NumberUtils.isCreatable(prixNew)) {
 			throw new SavePizzaException("Valeur interdite");
 		} else {
-			double prixDoubleNew = Double.parseDouble(prixNew);
-			Pizza pizzaAdd = new Pizza(codeNew, nomNew, prixDoubleNew);
+			System.out.println("Veuillez saisin une catégorie");
+		}
+
+		double prixDoubleNew = Double.parseDouble(prixNew);
+		String catNew = scanner.nextLine();
+
+		if (!CategoriePizza.CategExists(catNew)) {
+			throw new SavePizzaException("Aucune catégorie saisie");
+		} else {
+			CategoriePizza cat = CategoriePizza.valueOf(catNew);
+			Pizza pizzaAdd = new Pizza(codeNew, nomNew, prixDoubleNew, catNew);
 			dao.saveNewPizza(pizzaAdd);
 		}
 	}

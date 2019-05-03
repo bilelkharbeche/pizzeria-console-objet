@@ -23,6 +23,8 @@ public class Pizza {
 	private String libelle;
 	/** prix : double */
 	private double prix;
+	/** categoriePizza : String */
+	private String categoriePizza;
 
 	/**
 	 * Constructor
@@ -36,11 +38,12 @@ public class Pizza {
 	 * @param prix
 	 *            prix
 	 */
-	public Pizza(int id, String code, String libelle, double prix) {
+	public Pizza(int id, String code, String libelle, double prix, String categoriePizza) {
 		this.id = id;
 		this.code = code;
 		this.libelle = libelle;
 		this.prix = prix;
+		this.categoriePizza = categoriePizza;
 	}
 
 	/**
@@ -50,10 +53,11 @@ public class Pizza {
 	 * @param libelle
 	 * @param prix
 	 */
-	public Pizza(String code, String libelle, double prix) {
+	public Pizza(String code, String libelle, double prix, String categoriePizza) {
 		this.code = code;
 		this.libelle = libelle;
 		this.prix = prix;
+		this.categoriePizza = categoriePizza;
 		id++;
 	}
 
@@ -133,6 +137,25 @@ public class Pizza {
 		this.prix = prix;
 	}
 
+	/**
+	 * Getter
+	 * 
+	 * @return the categoriePizza
+	 */
+	public String getCategoriePizza() {
+		return categoriePizza;
+	}
+
+	/**
+	 * Setter
+	 * 
+	 * @param categoriePizza
+	 *            the categoriePizza to set
+	 */
+	public void setCategoriePizza(String categoriePizza) {
+		this.categoriePizza = categoriePizza;
+	}
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -172,7 +195,7 @@ public class Pizza {
 	 */
 	@Override
 	public String toString() {
-		return code + " -> " + libelle + " (" + prix + "€)";
+		return code + " -> " + libelle + " (" + prix + "€)" + " -> " + categoriePizza;
 	}
 
 }

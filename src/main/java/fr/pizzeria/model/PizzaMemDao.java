@@ -16,14 +16,14 @@ public class PizzaMemDao implements IPizzaDao {
 	private ArrayList<Pizza> listePizza = new ArrayList();
 
 	public PizzaMemDao() {
-		Pizza pep = new Pizza("PEP", "Pépéroni", 12.50);
-		Pizza mar = new Pizza("MAR", "Margherita", 14.00);
-		Pizza rein = new Pizza("REIN", "La Reine", 11.00);
-		Pizza fro = new Pizza("FRO", "La 4 fromages", 12.00);
-		Pizza can = new Pizza("CAN", "La cannibale", 12.50);
-		Pizza sav = new Pizza("SAV", "La savoyarde", 13.00);
-		Pizza ori = new Pizza("ORI", "L’orientale", 13.50);
-		Pizza ind = new Pizza("IND", "L’indienne", 14.00);
+		Pizza pep = new Pizza("PEP", "Pépéroni", 12.50, "Viande");
+		Pizza mar = new Pizza("MAR", "Margherita", 14.00, "Sans Viande");
+		Pizza rein = new Pizza("REIN", "La Reine", 11.00, "Sans Viande");
+		Pizza fro = new Pizza("FRO", "La 4 fromages", 12.00, "Sans Viande");
+		Pizza can = new Pizza("CAN", "La cannibale", 12.50, "Poisson");
+		Pizza sav = new Pizza("SAV", "La savoyarde", 13.00, "Sans Viande");
+		Pizza ori = new Pizza("ORI", "L’orientale", 13.50, "Poisson");
+		Pizza ind = new Pizza("IND", "L’indienne", 14.00, "Viande");
 
 		listePizza.add(pep);
 		listePizza.add(mar);
@@ -53,6 +53,7 @@ public class PizzaMemDao implements IPizzaDao {
 		update.setCode(pizza.getCode());
 		update.setLibelle(pizza.getLibelle());
 		update.setPrix(pizza.getPrix());
+		update.setCategoriePizza(pizza.getCategoriePizza());
 	}
 
 	@Override
