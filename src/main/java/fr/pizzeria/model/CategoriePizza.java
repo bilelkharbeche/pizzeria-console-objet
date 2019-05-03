@@ -9,8 +9,14 @@ package fr.pizzeria.model;
  */
 public enum CategoriePizza {
 
-	VIANDE("Viande"), POISSON("Poisson"), SANS_VIANDE("Sans Viande");
+	/** VIANDE : Categorie pour les pizzas contenant de la viande */
+	VIANDE("Viande"),
+	/** POISSON : Categorie pour les pizzas contenant du poisson */
+	POISSON("Poisson"),
+	/** SANS_VIANDE : Categorie pour les pizzas sans viandes */
+	SANS_VIANDE("Sans Viande");
 
+	/** categorie : String */
 	private String categorie;
 
 	private CategoriePizza(String categorie) {
